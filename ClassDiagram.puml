@@ -1,0 +1,684 @@
+@startuml
+class com.ecalm.ez_health.data.models.UserModel {
+~ int id
+~ String username
+~ String email
+~ String password
+~ int bodyWight
+~ int bodyTall
++ <<Create>> UserModel(int,String,String,String,int,int)
++ int getId()
++ void setId(int)
++ String getUsername()
++ void setUsername(String)
++ String getEmail()
++ void setEmail(String)
++ String getPassword()
++ void setPassword(String)
++ int getBodyWight()
++ void setBodyWight(int)
++ int getBodyTall()
++ void setBodyTall(int)
+}
+class com.ecalm.ez_health.intro.SecondIntroFragment {
+- {static} String ARG_PARAM1
+- {static} String ARG_PARAM2
+- String mParam1
+- String mParam2
+- OnFragmentInteractionListener mListener
++ <<Create>> SecondIntroFragment()
++ {static} SecondIntroFragment newInstance(String,String)
++ void onCreate(Bundle)
++ View onCreateView(LayoutInflater,ViewGroup,Bundle)
++ void onButtonPressed(Uri)
++ void onAttach(Context)
++ void onDetach()
+}
+interface com.ecalm.ez_health.intro.SecondIntroFragment.OnFragmentInteractionListener {
+~ void onFragmentInteraction(Uri)
+}
+class com.ecalm.ez_health.presenter.LoginPresenter {
+}
+class com.ecalm.ez_health.ScanActivity {
+~ ScanContract.Presenter presenter
+- Button btnCapture
+- ImageView imageViewResult
+- CameraKitView cameraKitView
+~ int tipe
+~ Calendar c
+~ RecyclerView recyclerView
+~ FoodAdapter foodAdapter
+~ TextView done
+~ ProgressDialog mProgressDialog
+~ SharedPreferences sharedPreferences
+~ AssetManager asset
+# void onCreate(Bundle)
++ void doneButton(float)
++ void backButton()
++ void successAddCalorie(float)
++ void updateRecognizeFood(ArrayList<Food>)
++ void updateAddFood(ArrayList<Food>)
++ void makeButtonVisible()
+- void recognizeImage()
+- void startLoadingProcessingImage()
+- void finishLoadingProcessingImage()
++ void onRequestPermissionsResult(int,String[],int[])
+# void onStart()
+# void onResume()
+# void onPause()
+# void onStop()
++ void onBackPressed()
++ void Vtest(String)
+}
+class com.ecalm.ez_health.model.Food {
+~ int id
+~ String name
+~ float calorie
+~ float weight
++ <<Create>> Food()
++ <<Create>> Food(int,String,float,float)
++ <<Create>> Food(String,float,float)
++ int getId()
++ void setId(int)
++ String getName()
++ void setName(String)
++ float getCalorie()
++ void setCalorie(float)
++ float getWeight()
++ void setWeight(float)
+}
+class com.ecalm.ez_health.adapter.SearchFoodAdapter {
+- ArrayList<Food> dataList
+- Context context
+- {static} SearchFoodAdapter.ClickListener clickListener
++ <<Create>> SearchFoodAdapter(ArrayList<Food>)
++ <<Create>> SearchFoodAdapter()
++ SearchFoodViewHolder onCreateViewHolder(ViewGroup,int)
++ void onBindViewHolder(SearchFoodAdapter.SearchFoodViewHolder,int)
++ int getItemCount()
++ void setData(ArrayList<Food>)
++ void setOnItemClickListener(SearchFoodAdapter.ClickListener)
+}
+class com.ecalm.ez_health.adapter.SearchFoodAdapter.SearchFoodViewHolder {
+- TextView txtName
+- View mview
+- LinearLayout searchFoodLayout
+- int position
++ <<Create>> SearchFoodViewHolder(View)
++ void onClick(View)
++ boolean onLongClick(View)
+}
+interface com.ecalm.ez_health.adapter.SearchFoodAdapter.ClickListener {
+~ void onItemClick(int,View)
+~ void onItemLongClick(int,View)
+}
+class com.ecalm.ez_health.intro.FirstIntroFragment {
+- View view
++ <<Create>> FirstIntroFragment()
++ void onCreate(Bundle)
++ View onCreateView(LayoutInflater,ViewGroup,Bundle)
++ void onViewCreated(View,Bundle)
+}
+class com.ecalm.ez_health.fragment.InfoMakananFragment {
+- {static} String ARG_PARAM1
+- {static} String ARG_PARAM2
+- String mParam1
+- String mParam2
+~ ArrayList<Food> foods
+~ RecyclerView recyclerView
+~ SearchFoodAdapter searchFoodAdapter
+~ EditText searchFood
+~ InfoMakananContract.Presenter presenter
+~ DatabaseHelper db
++ <<Create>> InfoMakananFragment()
++ {static} InfoMakananFragment newInstance(String,String)
++ void onCreate(Bundle)
++ View onCreateView(LayoutInflater,ViewGroup,Bundle)
++ void updateListFood(ArrayList<Food>)
+}
+class com.ecalm.ez_health.presenter.ScanPresenter {
+~ ScanContract.View view
+~ ScanContract.Interactor interactor
+~ SharedPreferences sharedPreferences
+~ float totalCalorie
+~ ArrayList<Food> foodArrayList
+- Executor executor
+~ AssetManager asset
+- DatabaseHelper db
+~ ArrayList<History> history
+- Calendar c
+- int tipe
+- {static} String MODEL_PATH
+- {static} boolean QUANT
+- {static} String LABEL_PATH
+- {static} int INPUT_SIZE
+- Classifier classifier
++ <<Create>> ScanPresenter(ScanContract.View,ScanContract.Interactor,SharedPreferences,AssetManager,DatabaseHelper,int,Calendar)
++ void addFood(int)
++ void removeFood(int)
++ void done()
++ void commit()
++ void back()
++ Bitmap byteToBitmap(byte[])
++ List<Classifier.Recognition> recognizeFoods(Bitmap)
+- void initTensorFlowAndLoadModel()
++ void Ptest(String)
+}
+interface com.ecalm.ez_health.presenter.HomeContract {
+}
+interface com.ecalm.ez_health.presenter.HomeContract.View {
+~ void updateHealthy(String)
+~ void updateCalorieCounter(String,String,String,String,String)
+}
+interface com.ecalm.ez_health.presenter.HomeContract.Presenter {
+~ void checkPermission(AppCompatActivity)
+~ void healthyStatus(String)
+~ void calorieCounterByDate(String)
+}
+class com.ecalm.ez_health.presenter.InfoMakananPresenter {
+~ InfoMakananContract.View view
+~ DatabaseHelper db
++ <<Create>> InfoMakananPresenter(InfoMakananContract.View,DatabaseHelper)
++ void addFood(Food)
++ void removeFood(int)
++ void listFood()
++ void searchFood(String)
+}
+class com.ecalm.ez_health.math.Status {
++ <<Create>> Status()
++ String cekStatus(float,float)
+}
+class com.ecalm.ez_health.intro.ThridIntroFragment {
+- {static} String ARG_PARAM1
+- {static} String ARG_PARAM2
+- String mParam1
+- String mParam2
+- OnFragmentInteractionListener mListener
++ <<Create>> ThridIntroFragment()
++ {static} ThridIntroFragment newInstance(String,String)
++ void onCreate(Bundle)
++ View onCreateView(LayoutInflater,ViewGroup,Bundle)
++ void onButtonPressed(Uri)
++ void onAttach(Context)
++ void onDetach()
+}
+interface com.ecalm.ez_health.intro.ThridIntroFragment.OnFragmentInteractionListener {
+~ void onFragmentInteraction(Uri)
+}
+class com.ecalm.ez_health.presenter.RegisterPresenter {
+~ RegisterContract.View view
++ <<Create>> RegisterPresenter(RegisterContract.View)
++ void register(AppCompatActivity,EditText,EditText,EditText,EditText,int)
++ boolean checkForm(EditText,EditText,EditText,EditText)
+- boolean isEmpty(EditText)
+}
+class com.ecalm.ez_health.math.CapitalizeFirstLetter {
++ {static} String capitaliseName(String)
++ {static} String capitaliseOnlyFirstLetter(String)
+}
+class com.ecalm.ez_health.model.History {
+~ int id
+~ int tipe
+~ int foodid
+~ Date createdDate
++ <<Create>> History()
++ <<Create>> History(int,int,int,Date)
++ <<Create>> History(int,int,Date)
++ <<Create>> History(int,int)
++ int getId()
++ void setId(int)
++ int getTipe()
++ void setTipe(int)
++ int getFoodid()
++ void setFoodid(int)
++ Date getCreatedDate()
++ void setCreatedDate(Date)
+}
+interface com.ecalm.ez_health.presenter.RegisterContract {
+}
+interface com.ecalm.ez_health.presenter.RegisterContract.View {
+~ void finishRegister(User)
+~ void failedRegister()
+}
+interface com.ecalm.ez_health.presenter.RegisterContract.Presenter {
+~ void register(AppCompatActivity,EditText,EditText,EditText,EditText,int)
+~ boolean checkForm(EditText,EditText,EditText,EditText)
+}
+class com.ecalm.ez_health.presenter.MinumPresenter {
+~ SharedPreferences sharedPreferences
+~ MinumContract.View view
+~ DatabaseHelper db
++ <<Create>> MinumPresenter(MinumContract.View,SharedPreferences,DatabaseHelper)
++ void minumCounterByDate(Date)
++ void addMinum(int,Date)
++ void removeMinum(int,String)
+}
+class com.ecalm.ez_health.App {
++ void onCreate()
+}
+class com.ecalm.ez_health.math.calorie {
++ <<Create>> calorie()
++ int calculateCalorie(int,int)
+}
+interface com.ecalm.ez_health.tensorflowLite.Classifier {
+~ List<Recognition> recognizeImage(Bitmap)
+~ void enableStatLogging(boolean)
+~ String getStatString()
+~ void close()
+~ void setNumThreads(int)
+~ void setUseNNAPI(boolean)
+}
+class com.ecalm.ez_health.tensorflowLite.Classifier.Recognition {
+- String id
+- String title
+- Float confidence
+- RectF location
++ <<Create>> Recognition(String,String,Float,RectF)
++ String getId()
++ String getTitle()
++ Float getConfidence()
++ RectF getLocation()
++ void setLocation(RectF)
++ String toString()
+}
+class com.ecalm.ez_health.presenter.ScanInteractor {
+~ ScanContract.Presenter presenter
+~ ArrayList<Food> foodArrayList
+~ SharedPreferences sharedPreferences
+~ AssetManager asset
+~ DatabaseHelper db
++ <<Create>> ScanInteractor()
++ void initInteractor(ScanContract.Presenter,SharedPreferences,AssetManager,DatabaseHelper)
++ void done()
++ void back()
++ List<Classifier.Recognition> recognizeFoods(Bitmap)
++ void addFood(int)
++ Bitmap byteToBitmap(byte[])
++ String Itest(String)
+}
+class com.ecalm.ez_health.math.BMR {
++ <<Create>> BMR()
++ float getMaleBmr(float,float,float)
++ float getFemaleBmr(float,float,float)
+}
+class com.ecalm.ez_health.model.SharedPrefManager {
+~ Context ctx
+- {static} SharedPrefManager mInstance
++ {static} String SHARED_PREF_NAME
++ {static} String KEY_NAME
++ {static} String KEY_WEIGHT
++ {static} String KEY_TALL
++ {static} String KEY_GENDER
++ {static} String KEY_AGE
++ {static} String KEY_ACTIVITY
++ {static} String KEY_TARGET
++ {static} String KEY_CALORIE
++ {static} String KEY_LIMIT
++ {static} String KEY_LIMIT_PAGI
++ {static} String KEY_LIMIT_SIANG
++ {static} String KEY_LIMIT_MALAM
++ {static} String KEY_LIMIT_SNACK
+- <<Create>> SharedPrefManager(Context)
++ {static} SharedPrefManager getInstance(Context)
++ void userRegister(User)
++ boolean isLoggedIn()
++ void updateBiodata(User)
+}
+class com.ecalm.ez_health.auth.LoginActivity {
+~ EditText mUserName
+~ Button btnSignIn
+~ TextView tvSignUp
+~ String uName
+~ String API
+~ ProgressBar pgLogin
+# void onCreate(Bundle)
+~ void getInputText()
+~ void postData()
+}
+class com.ecalm.ez_health.HomeActivity {
+~ BottomNavigationView bottomNavigation
+- int mContainerId
+- FragmentTransaction fragmentTransaction
+- FragmentManager fragmentManager
+- {static} String TAG
+~ NavigationBarView.OnItemSelectedListener bnv
+# void onCreate(Bundle)
++ void openFragment(Fragment)
++ void changeFragment(int)
+}
+class com.ecalm.ez_health.model.Drink {
+~ int id
+~ int count
+~ Date date
++ <<Create>> Drink(int,int,Date)
++ <<Create>> Drink(int,Date)
++ <<Create>> Drink()
++ int getId()
++ void setId(int)
++ int getCount()
++ void setCount(int)
++ Date getDate()
++ void setDate(Date)
+}
+class com.ecalm.ez_health.fragment.ProfileFragment {
+- {static} String ARG_PARAM1
+- {static} String ARG_PARAM2
+- String mParam1
+- String mParam2
+~ SharedPreferences sharedPreferences
+~ TextView name
+~ LinearLayout logout
++ <<Create>> ProfileFragment()
++ {static} ProfileFragment newInstance(String,String)
++ void onCreate(Bundle)
++ View onCreateView(LayoutInflater,ViewGroup,Bundle)
+- void showPopUp()
+}
+class com.ecalm.ez_health.tensorflowLite.TensorFlowImageClassifier {
+- {static} int NUM_DETECTIONS
+- {static} float IMAGE_MEAN
+- {static} float IMAGE_STD
+- {static} int NUM_THREADS
+- boolean isModelQuantized
+- int inputSize
+- Vector<String> labels
+- int[] intValues
+- float[][][] outputLocations
+- float[][] outputClasses
+- float[][] outputScores
+- float[] numDetections
+- ByteBuffer imgData
+- Interpreter tfLite
+- <<Create>> TensorFlowImageClassifier()
+- {static} MappedByteBuffer loadModelFile(AssetManager,String)
++ {static} Classifier create(AssetManager,String,String,int,boolean)
++ List<Recognition> recognizeImage(Bitmap)
++ void enableStatLogging(boolean)
++ String getStatString()
++ void close()
++ void setNumThreads(int)
++ void setUseNNAPI(boolean)
+}
+interface com.ecalm.ez_health.data.preferences.UserPreferences {
+~ String IS_USER_LOGIN
++ void setUserLogin(boolean)
++ boolean isUserLogin()
++ void clearUser()
+}
+class com.ecalm.ez_health.network.ConnectivityHelper {
++ {static} boolean isConnectedToNetwork(Context)
+}
+class com.ecalm.ez_health.IntroActivity {
+# void onCreate(Bundle)
++ void onSkipPressed(Fragment)
++ void onDonePressed(Fragment)
++ void onSlideChanged(Fragment,Fragment)
+}
+class com.ecalm.ez_health.sqlite.DatabaseHelper {
+- {static} int DATABASE_VERSION
+- {static} String DATABASE_NAME
++ <<Create>> DatabaseHelper(Context)
++ void onCreate(SQLiteDatabase)
++ void onUpgrade(SQLiteDatabase,int,int)
++ int getCalorieDate(String)
++ int getCalorieDateType(String,int)
++ boolean insertHistory(History)
++ boolean updateHistory(int,History)
++ boolean deleteHistory(History)
++ List<History> getAllHistory()
++ List<History> getHistoryByDate(String)
++ List<History> getHistoryByDateType(String,int)
++ Drink searchDrink(Date)
++ boolean updateDrink(int,Drink)
++ boolean updateDrink(int,Date)
++ boolean cekDrink(Date)
++ boolean insertDrink(Drink)
++ boolean insertFood(Food)
++ boolean deleteFood(int)
++ boolean updateFood(int,Food)
++ List<Food> getAllFood()
++ Food searchFoodName(String)
++ List<Food> searchFood(String)
++ Food searchFoodId(String)
++ boolean cekFood()
+}
+class com.ecalm.ez_health.fragment.HomeFragment {
+- {static} String ARG_PARAM1
+- {static} String ARG_PARAM2
+- String mParam1
+- String mParam2
+~ HomeContract.Presenter presenter
+~ RelativeLayout makanSiang
+~ RelativeLayout makanMalam
+~ RelativeLayout sarapanPagi
+~ RelativeLayout snack
+~ ImageButton nextDate
+~ TextView date
+~ DatabaseHelper db
+~ SharedPreferences sharedPreferences
+~ SimpleDateFormat df
+~ Calendar c
+~ int dayShift
++ <<Create>> HomeFragment()
++ {static} HomeFragment newInstance(String,String)
++ void onCreate(Bundle)
++ View onCreateView(LayoutInflater,ViewGroup,Bundle)
++ void datenow()
++ void updateHealthy(String)
++ void updateCalorieCounter(String,String,String,String,String)
+}
+class com.ecalm.ez_health.auth.RegisterActivity {
+~ RegisterContract.Presenter presenter
+~ EditText mUserName
+~ Button btnRegister
+~ TextView tvSignIn
+~ int gender
+~ ProgressBar pgRegister
+~ RadioGroup mGender
+# void onCreate(Bundle)
++ void finishRegister(User)
++ void failedRegister()
+}
+interface com.ecalm.ez_health.presenter.MinumContract {
+}
+interface com.ecalm.ez_health.presenter.MinumContract.View {
+~ void updateMinum(int)
+}
+interface com.ecalm.ez_health.presenter.MinumContract.Presenter {
+~ void minumCounterByDate(Date)
+~ void addMinum(int,Date)
+~ void removeMinum(int,String)
+}
+class com.ecalm.ez_health.fragment.MinumFragment {
+- {static} String ARG_PARAM1
+- {static} String ARG_PARAM2
+- String mParam1
+- String mParam2
+~ MinumContract.Presenter presenter
+~ DatabaseHelper db
+~ SharedPreferences sharedPreferences
+~ ImageButton gelas1
+~ SimpleDateFormat df
+~ Calendar c
+~ TextView date
+~ ImageButton nextDate
++ <<Create>> MinumFragment()
++ {static} MinumFragment newInstance(String,String)
++ void onCreate(Bundle)
++ View onCreateView(LayoutInflater,ViewGroup,Bundle)
++ void updateMinum(int)
+}
+class com.ecalm.ez_health.presenter.HomePresenter {
+~ SharedPreferences sharedPreferences
+~ HomeContract.View view
+~ DatabaseHelper db
++ <<Create>> HomePresenter(HomeContract.View,SharedPreferences,DatabaseHelper)
++ void checkPermission(AppCompatActivity)
++ void healthyStatus(String)
++ void calorieCounterByDate(String)
+}
+class com.ecalm.ez_health.model.User {
+~ String name
+~ int age
+~ float height
+~ float weight
+~ int gender
+~ int activity
+~ int program
++ <<Create>> User()
++ <<Create>> User(String,int,float,float,int)
++ <<Create>> User(String,int,float,float,int,int,int)
++ int getActivity()
++ void setActivity(int)
++ int getProgram()
++ void setProgram(int)
++ String getName()
++ void setName(String)
++ int getAge()
++ void setAge(int)
++ float getHeight()
++ void setHeight(float)
++ float getWeight()
++ void setWeight(float)
++ int getGender()
++ void setGender(int)
+}
+class com.ecalm.ez_health.auth.SplashScreenActivity {
+- int waktu
+# void onCreate(Bundle)
+}
+class com.ecalm.ez_health.data.preferences.PreferencesProvider {
+- {static} String SHARED_PREFERENCES
+- {static} SharedPreferences sPreferences
++ {static} SharedPreferences providePreferences()
++ {static} void init(Context)
+}
+class com.ecalm.ez_health.data.preferences.UserPreferencesImpl {
+# SharedPreferences mPreferences
++ <<Create>> UserPreferencesImpl()
++ void setUserLogin(boolean)
++ boolean isUserLogin()
++ void clearUser()
+}
+interface com.ecalm.ez_health.presenter.ScanContract {
+}
+interface com.ecalm.ez_health.presenter.ScanContract.View {
+~ void updateRecognizeFood(ArrayList<Food>)
+~ void updateAddFood(ArrayList<Food>)
+~ void makeButtonVisible()
+~ void successAddCalorie(float)
+~ void doneButton(float)
+~ void backButton()
+~ void Vtest(String)
+}
+interface com.ecalm.ez_health.presenter.ScanContract.Presenter {
+~ void done()
+~ void commit()
+~ void back()
+~ List<Classifier.Recognition> recognizeFoods(Bitmap)
+~ void addFood(int)
+~ Bitmap byteToBitmap(byte[])
+~ void Ptest(String)
+}
+interface com.ecalm.ez_health.presenter.ScanContract.Interactor {
++ void initInteractor(ScanContract.Presenter,SharedPreferences,AssetManager,DatabaseHelper)
+~ void done()
+~ void back()
+~ List<Classifier.Recognition> recognizeFoods(Bitmap)
+~ void addFood(int)
+~ Bitmap byteToBitmap(byte[])
+~ String Itest(String)
+}
+class com.ecalm.ez_health.adapter.FoodAdapter {
+- ArrayList<Food> dataList
+- Context context
+- {static} ClickListener clickListener
++ <<Create>> FoodAdapter(ArrayList<Food>)
++ <<Create>> FoodAdapter()
++ FoodViewHolder onCreateViewHolder(ViewGroup,int)
++ void onBindViewHolder(FoodViewHolder,int)
++ int getItemCount()
++ void setData(ArrayList<Food>)
++ void setOnItemClickListener(ClickListener)
+}
+class com.ecalm.ez_health.adapter.FoodAdapter.FoodViewHolder {
+- TextView txtName
+- LinearLayout foodCardLayout
+- View mview
+- int position
++ <<Create>> FoodViewHolder(View)
++ void onClick(View)
++ boolean onLongClick(View)
+}
+interface com.ecalm.ez_health.adapter.FoodAdapter.ClickListener {
+~ void onItemClick(int,View)
+~ void onItemLongClick(int,View)
+}
+interface com.ecalm.ez_health.presenter.InfoMakananContract {
+}
+interface com.ecalm.ez_health.presenter.InfoMakananContract.View {
+~ void updateListFood(ArrayList<Food>)
+}
+interface com.ecalm.ez_health.presenter.InfoMakananContract.Presenter {
+~ void addFood(Food)
+~ void removeFood(int)
+~ void listFood()
+~ void searchFood(String)
+}
+
+
+androidx.fragment.app.Fragment <|-- com.ecalm.ez_health.intro.SecondIntroFragment
+com.ecalm.ez_health.intro.SecondIntroFragment +.. com.ecalm.ez_health.intro.SecondIntroFragment.OnFragmentInteractionListener
+android.view.View <|.. com.ecalm.ez_health.ScanActivity
+androidx.appcompat.app.AppCompatActivity <|-- com.ecalm.ez_health.ScanActivity
+com.ecalm.ez_health.adapter.Adapter <|-- com.ecalm.ez_health.adapter.SearchFoodAdapter
+com.ecalm.ez_health.adapter.SearchFoodAdapter +.. com.ecalm.ez_health.adapter.SearchFoodAdapter.SearchFoodViewHolder
+com.ecalm.ez_health.adapter.OnClickListener <|.. com.ecalm.ez_health.adapter.SearchFoodAdapter.SearchFoodViewHolder
+com.ecalm.ez_health.adapter.OnLongClickListener <|.. com.ecalm.ez_health.adapter.SearchFoodAdapter.SearchFoodViewHolder
+com.ecalm.ez_health.adapter.ViewHolder <|-- com.ecalm.ez_health.adapter.SearchFoodAdapter.SearchFoodViewHolder
+com.ecalm.ez_health.adapter.SearchFoodAdapter +.. com.ecalm.ez_health.adapter.SearchFoodAdapter.ClickListener
+androidx.fragment.app.Fragment <|-- com.ecalm.ez_health.intro.FirstIntroFragment
+android.view.View <|.. com.ecalm.ez_health.fragment.InfoMakananFragment
+androidx.fragment.app.Fragment <|-- com.ecalm.ez_health.fragment.InfoMakananFragment
+com.ecalm.ez_health.presenter.Presenter <|.. com.ecalm.ez_health.presenter.ScanPresenter
+com.ecalm.ez_health.presenter.HomeContract +.. com.ecalm.ez_health.presenter.HomeContract.View
+com.ecalm.ez_health.presenter.HomeContract +.. com.ecalm.ez_health.presenter.HomeContract.Presenter
+com.ecalm.ez_health.presenter.Presenter <|.. com.ecalm.ez_health.presenter.InfoMakananPresenter
+androidx.fragment.app.Fragment <|-- com.ecalm.ez_health.intro.ThridIntroFragment
+com.ecalm.ez_health.intro.ThridIntroFragment +.. com.ecalm.ez_health.intro.ThridIntroFragment.OnFragmentInteractionListener
+com.ecalm.ez_health.presenter.Presenter <|.. com.ecalm.ez_health.presenter.RegisterPresenter
+com.ecalm.ez_health.presenter.RegisterContract +.. com.ecalm.ez_health.presenter.RegisterContract.View
+com.ecalm.ez_health.presenter.RegisterContract +.. com.ecalm.ez_health.presenter.RegisterContract.Presenter
+com.ecalm.ez_health.presenter.Presenter <|.. com.ecalm.ez_health.presenter.MinumPresenter
+android.app.Application <|-- com.ecalm.ez_health.App
+com.ecalm.ez_health.tensorflowLite.Classifier +.. com.ecalm.ez_health.tensorflowLite.Classifier.Recognition
+com.ecalm.ez_health.presenter.Interactor <|.. com.ecalm.ez_health.presenter.ScanInteractor
+androidx.appcompat.app.AppCompatActivity <|-- com.ecalm.ez_health.auth.LoginActivity
+androidx.appcompat.app.AppCompatActivity <|-- com.ecalm.ez_health.HomeActivity
+androidx.fragment.app.Fragment <|-- com.ecalm.ez_health.fragment.ProfileFragment
+com.ecalm.ez_health.tensorflowLite.Classifier <|.. com.ecalm.ez_health.tensorflowLite.TensorFlowImageClassifier
+com.github.paolorotolo.appintro.AppIntro <|-- com.ecalm.ez_health.IntroActivity
+android.database.sqlite.SQLiteOpenHelper <|-- com.ecalm.ez_health.sqlite.DatabaseHelper
+android.view.View <|.. com.ecalm.ez_health.fragment.HomeFragment
+androidx.fragment.app.Fragment <|-- com.ecalm.ez_health.fragment.HomeFragment
+android.view.View <|.. com.ecalm.ez_health.auth.RegisterActivity
+androidx.appcompat.app.AppCompatActivity <|-- com.ecalm.ez_health.auth.RegisterActivity
+com.ecalm.ez_health.presenter.MinumContract +.. com.ecalm.ez_health.presenter.MinumContract.View
+com.ecalm.ez_health.presenter.MinumContract +.. com.ecalm.ez_health.presenter.MinumContract.Presenter
+android.view.View <|.. com.ecalm.ez_health.fragment.MinumFragment
+androidx.fragment.app.Fragment <|-- com.ecalm.ez_health.fragment.MinumFragment
+com.ecalm.ez_health.presenter.Presenter <|.. com.ecalm.ez_health.presenter.HomePresenter
+androidx.appcompat.app.AppCompatActivity <|-- com.ecalm.ez_health.auth.SplashScreenActivity
+com.ecalm.ez_health.data.preferences.UserPreferences <|.. com.ecalm.ez_health.data.preferences.UserPreferencesImpl
+com.ecalm.ez_health.presenter.ScanContract +.. com.ecalm.ez_health.presenter.ScanContract.View
+com.ecalm.ez_health.presenter.ScanContract +.. com.ecalm.ez_health.presenter.ScanContract.Presenter
+com.ecalm.ez_health.presenter.ScanContract +.. com.ecalm.ez_health.presenter.ScanContract.Interactor
+com.ecalm.ez_health.adapter.Adapter <|-- com.ecalm.ez_health.adapter.FoodAdapter
+com.ecalm.ez_health.adapter.FoodAdapter +.. com.ecalm.ez_health.adapter.FoodAdapter.FoodViewHolder
+com.ecalm.ez_health.adapter.OnClickListener <|.. com.ecalm.ez_health.adapter.FoodAdapter.FoodViewHolder
+com.ecalm.ez_health.adapter.OnLongClickListener <|.. com.ecalm.ez_health.adapter.FoodAdapter.FoodViewHolder
+com.ecalm.ez_health.adapter.ViewHolder <|-- com.ecalm.ez_health.adapter.FoodAdapter.FoodViewHolder
+com.ecalm.ez_health.adapter.FoodAdapter +.. com.ecalm.ez_health.adapter.FoodAdapter.ClickListener
+com.ecalm.ez_health.presenter.InfoMakananContract +.. com.ecalm.ez_health.presenter.InfoMakananContract.View
+com.ecalm.ez_health.presenter.InfoMakananContract +.. com.ecalm.ez_health.presenter.InfoMakananContract.Presenter
+@enduml

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/homeFragment"
+        android:title="Home"
+        android:icon="@drawable/ic_baseline_home_24"/>
+    <item
+        android:id="@+id/infoMakananFragment"
+        android:title="Info Makanan"
+        android:icon="@drawable/ic_menu_infofood"/>
+    <item
+        android:id="@+id/scanFragment"
+        android:title=""/>
+    <item
+        android:id="@+id/minumFragment"
+        android:title="Minum"
+        android:icon="@drawable/ic_menu_drink"/>
+    <item
+        android:id="@+id/profileFragment"
+        android:title="Profile"
+        android:icon="@drawable/ic_baseline_person_24"/>
+</menu>

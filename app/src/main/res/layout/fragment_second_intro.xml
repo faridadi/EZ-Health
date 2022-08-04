@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/yellow_background"
-    tools:context=".intro.SecondIntroFragment">
+    tools:context="com.ecalm.ez_health.intro.SecondIntroFragment">
 
     <ImageView
         android:layout_width="354dp"
@@ -22,7 +22,6 @@
         android:layout_alignParentBottom="true">
 
         <TextView
-            android:id="@+id/textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/francois_one"

@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="../../../../layout/custom_preview.xml" value="0.21041666666666667" />
+        <entry key="../../.gradle/caches/transforms-2/files-2.1/a877a903eb2c8969eacd816edea47832/jetified-AppIntro-5.1.0/res/drawable/ic_appintro_arrow_back_white.xml" value="0.21458333333333332" />
+        <entry key="../../.gradle/caches/transforms-2/files-2.1/a877a903eb2c8969eacd816edea47832/jetified-AppIntro-5.1.0/res/drawable/ic_appintro_arrow_forward_white.xml" value="0.21458333333333332" />
+        <entry key="app/src/main/res/drawable/biodata_edittext.xml" value="0.19322916666666667" />
+        <entry key="app/src/main/res/drawable/bottom_sheet_bg.xml" value="0.1355263157894737" />
+        <entry key="app/src/main/res/drawable/bottom_sheet_btn.xml" value="0.1355263157894737" />
+        <entry key="app/src/main/res/drawable/circle_shape.xml" value="0.196875" />
+        <entry key="app/src/main/res/drawable/custom_progressbar_drawable.xml" value="0.21458333333333332" />
+        <entry key="app/src/main/res/drawable/dialog_edit_text_bg.xml" value="0.21458333333333332" />
+        <entry key="app/src/main/res/drawable/dialog_tambah_makanan.xml" value="0.21458333333333332" />
+        <entry key="app/src/main/res/drawable/gelas_selector.xml" value="0.19322916666666667" />
+        <entry key="app/src/main/res/drawable/gender_null_radiobutton.xml" value="0.19322916666666667" />
+        <entry key="app/src/main/res/drawable/gender_radio_not_selected.xml" value="0.19322916666666667" />
+        <entry key="app/src/main/res/drawable/gender_radio_selected.xml" value="0.19322916666666667" />
+        <entry key="app/src/main/res/drawable/gender_radio_selector.xml" value="0.19322916666666667" />
+        <entry key="app/src/main/res/drawable/gender_radio_text_selector.xml" value="0.19322916666666667" />
+        <entry key="app/src/main/res/drawable/gender_right_radio_not_selected.xml" value="0.19322916666666667" />
+        <entry key="app/src/main/res/drawable/gender_right_radio_selected.xml" value="0.19322916666666667" />
+        <entry key="app/src/main/res/drawable/gender_right_radio_selector.xml" value="0.19322916666666667" />
+        <entry key="app/src/main/res/drawable/greengradientbackgound.xml" value="0.21458333333333332" />
+        <entry key="app/src/main/res/drawable/ic_age.xml" value="0.12552083333333333" />
+        <entry key="app/src/main/res/drawable/ic_backdate.xml" value="0.21458333333333332" />
+        <entry key="app/src/main/res/drawable/ic_baseline_add_24.xml" value="0.1355263157894737" />
+        <entry key="app/src/main/res/drawable/ic_baseline_arrow_back_ios_24.xml" value="0.21458333333333332" />
+        <entry key="app/src/main/res/drawable/ic_baseline_arrow_forward_ios_24.xml" value="0.25" />
+        <entry key="app/src/main/res/drawable/ic_baseline_bottom_sheet_arrow.xml" value="0.1355263157894737" />
+        <entry key="app/src/main/res/drawable/ic_baseline_camera_24.xml" value="0.21458333333333332" />
+        <entry key="app/src/main/res/drawable/ic_baseline_delete_forever_24.xml" value="0.196875" />
+        <entry key="app/src/main/res/drawable/ic_baseline_directions_walk_24.xml" value="0.21458333333333332" />
+        <entry key="app/src/main/res/drawable/ic_baseline_done_24.xml" value="0.1355263157894737" />
+        <entry key="app/src/main/res/drawable/ic_baseline_emoji_food_beverage_24.xml" value="0.21458333333333332" />
+        <entry key="app/src/main/res/drawable/ic_baseline_flash_off_24.xml" value="0.21458333333333332" />
+        <entry key="app/src/main/res/drawable/ic_baseline_flash_on_24.xml" value="0.21458333333333332" />
+        <entry key="app/src/main/res/drawable/ic_baseline_home_24.xml" value="0.3729166666666667" />
+        <entry key="app/src/main/res/drawable/ic_baseline_photo_camera_24.xml" value="0.21458333333333332" />
+        <entry key="app/src/main/res/drawable/ic_baseline_scan_photo_camera_24.xml" value="0.1355263157894737" />
+        <entry key="app/src/main/res/drawable/ic_empty_glass.xml" value="0.3729166666666667" />
+        <entry key="app/src/main/res/drawable/ic_fab_pagi.xml" value="0.12203947368421053" />
+        <entry key="app/src/main/res/drawable/ic_full_glass.xml" value="0.3729166666666667" />
+        <entry key="app/src/main/res/drawable/ic_home_malam.xml" value="0.19322916666666667" />
+        <entry key="app/src/main/res/drawable/ic_home_pagi.xml" value="0.19322916666666667" />
+        <entry key="app/src/main/res/drawable/ic_home_siang.xml" value="0.19322916666666667" />
+        <entry key="app/src/main/res/drawable/ic_home_snack.xml" value="0.19322916666666667" />
+        <entry key="app/src/main/res/drawable/ic_home_walk.xml" value="0.19322916666666667" />
+        <entry key="app/src/main/res/drawable/ic_logo.xml" value="0.19322916666666667" />
+        <entry key="app/src/main/res/drawable/ic_menu_drink.xml" value="0.12203947368421053" />
+        <entry key="app/src/main/res/drawable/ic_menu_infofood.xml" value="0.12203947368421053" />
+        <entry key="app/src/main/res/drawable/ic_next.xml" value="0.21458333333333332" />
+        <entry key="app/src/main/res/drawable/ic_nextdate.xml" value="0.3729166666666667" />
+        <entry key="app/src/main/res/drawable/ic_notification_burn.xml" value="0.21458333333333332" />
+        <entry key="app/src/main/res/drawable/ic_siang.xml" value="0.12203947368421053" />
+        <entry key="app/src/main/res/drawable/ic_username.xml" value="0.12552083333333333" />
+        <entry key="app/src/main/res/drawable/ic_weight.xml" value="0.12552083333333333" />
+        <entry key="app/src/main/res/drawable/profile_submenu_selector.xml" value="0.178" />
+        <entry key="app/src/main/res/drawable/roundcorner.xml" value="0.21458333333333332" />
+        <entry key="app/src/main/res/drawable/rounded_border_onregister.xml" value="0.196875" />
+        <entry key="app/src/main/res/drawable/rounded_button_auth.xml" value="0.1355263157894737" />
+        <entry key="app/src/main/res/drawable/searchborder.xml" value="0.196875" />
+        <entry key="app/src/main/res/drawable/tranparent_button.xml" value="0.19322916666666667" />
+        <entry key="app/src/main/res/drawable/white_button.xml" value="0.21458333333333332" />
+        <entry key="app/src/main/res/layout-land/activity_capture.xml" value="0.17592592592592593" />
+        <entry key="app/src/main/res/layout/activity_camera.xml" value="0.1984375" />
+        <entry key="app/src/main/res/layout/activity_capture.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_home.xml" value="0.16" />
+        <entry key="app/src/main/res/layout/activity_login.xml" value="0.1984375" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.1984375" />
+        <entry key="app/src/main/res/layout/activity_profile.xml" value="0.1953125" />
+        <entry key="app/src/main/res/layout/activity_register.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/activity_scan.xml" value="0.18072916666666666" />
+        <entry key="app/src/main/res/layout/activity_splash_screen.xml" value="0.17708333333333334" />
+        <entry key="app/src/main/res/layout/aktivitas_item.xml" value="0.17708333333333334" />
+        <entry key="app/src/main/res/layout/card_calorie.xml" value="0.1953125" />
+        <entry key="app/src/main/res/layout/card_edu.xml" value="0.1953125" />
+        <entry key="app/src/main/res/layout/card_makan_malam.xml" value="0.1953125" />
+        <entry key="app/src/main/res/layout/card_makan_siang.xml" value="0.1953125" />
+        <entry key="app/src/main/res/layout/card_remainder.xml" value="0.1953125" />
+        <entry key="app/src/main/res/layout/card_sarapan_pagi.xml" value="0.1953125" />
+        <entry key="app/src/main/res/layout/card_snack.xml" value="0.3079710144927536" />
+        <entry key="app/src/main/res/layout/card_step_counter.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/custom_progressbar_drawable.xml" value="0.1984375" />
+        <entry key="app/src/main/res/layout/dialog_delete_makanan.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/dialog_edit_makanan.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/dialog_info_scan.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/dialog_tambah_makanan.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/food_item.xml" value="0.1984375" />
+        <entry key="app/src/main/res/layout/foodlist_item.xml" value="0.22" />
+        <entry key="app/src/main/res/layout/fragment_biodata.xml" value="0.22" />
+        <entry key="app/src/main/res/layout/fragment_first_intro.xml" value="0.1984375" />
+        <entry key="app/src/main/res/layout/fragment_history.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.5" />
+        <entry key="app/src/main/res/layout/fragment_info_makanan.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/fragment_minum.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/fragment_profile.xml" value="0.1984375" />
+        <entry key="app/src/main/res/layout/fragment_scan.xml" value="0.1984375" />
+        <entry key="app/src/main/res/layout/fragment_second_intro.xml" value="0.1984375" />
+        <entry key="app/src/main/res/layout/fragment_thrid_intro.xml" value="0.1984375" />
+        <entry key="app/src/main/res/layout/historyfood_item.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/infofoodlist_item.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/notification_layout.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/program_item.xml" value="0.17708333333333334" />
+        <entry key="app/src/main/res/layout/rice_item.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/scan_bottom_sheet.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/scanfoodlist_item.xml" value="0.22" />
+        <entry key="app/src/main/res/menu/bottom_nav.xml" value="0.3567708333333333" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+  <component name="VisualizationToolProject">
+    <option name="state">
+      <ProjectState>
+        <option name="scale" value="0.1" />
+      </ProjectState>
+    </option>
+  </component>
+</project>

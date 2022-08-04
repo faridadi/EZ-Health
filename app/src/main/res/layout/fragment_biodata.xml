@@ -1,0 +1,392 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context="com.ecalm.ez_health.fragment.BiodataFragment">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="80dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/profileTbText"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:background="@null"
+                        android:gravity="right"
+                        android:inputType="number"
+                        android:maxLines="1"
+                        android:text="170"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toStartOf="@+id/textView18"
+                        app:layout_constraintStart_toStartOf="@+id/profileBbText"
+                        app:layout_constraintTop_toTopOf="@+id/profileUmurText5" />
+
+                    <EditText
+                        android:id="@+id/profileBbText"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:background="@null"
+                        android:inputType="number"
+                        android:maxLines="1"
+                        android:text="60"
+                        android:gravity="right"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toStartOf="@+id/textView17"
+                        app:layout_constraintStart_toStartOf="@+id/profileUmurText"
+                        app:layout_constraintTop_toTopOf="@+id/profileUmurText4" />
+
+                    <EditText
+                        android:id="@+id/profileUmurText"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:background="@null"
+                        android:gravity="right"
+                        android:inputType="number"
+                        android:maxLines="1"
+                        android:text="22"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toStartOf="@+id/textView16"
+                        app:layout_constraintStart_toStartOf="@+id/textView14"
+                        app:layout_constraintTop_toTopOf="@+id/profileUmurText3" />
+
+                    <TextView
+                        android:id="@+id/profileUmurText2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="10dp"
+                        android:text="Jenis Kelamin"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="@+id/imageProfile"
+                        app:layout_constraintTop_toBottomOf="@+id/imageProfile" />
+
+                    <RadioGroup
+                        android:id="@+id/bio_gender_radio"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30sp"
+                        android:layout_marginEnd="30dp"
+                        android:elevation="4dp"
+                        android:orientation="horizontal"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/profileUmurText2">
+
+                        <RadioButton
+                            android:id="@+id/bio_gender_female"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/gender_left_radio_selector"
+                            android:button="@drawable/gender_null_radiobutton"
+                            android:gravity="center"
+                            android:textSize="15sp"
+                            android:paddingHorizontal="4dp"
+                            android:text="Perempuan"
+                            android:textColor="@drawable/gender_radio_text_selector"
+                            android:textStyle="bold" />
+
+                        <RadioButton
+                            android:id="@+id/bio_gender_male"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/gender_right_radio_selector"
+                            android:button="@drawable/gender_null_radiobutton"
+                            android:gravity="center"
+                            android:textSize="15sp"
+                            android:paddingHorizontal="4dp"
+                            android:text="Laki-Laki"
+                            android:textColor="@drawable/gender_radio_text_selector"
+                            android:textStyle="bold" />
+                    </RadioGroup>
+
+                    <TextView
+                        android:id="@+id/profileUmurText7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginTop="20dp"
+                        android:text="Aktivitas"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/profileUmurText5" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/aktivitas_menu"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense.ExposedDropdownMenu"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="30dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.502"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/profileUmurText7">
+
+                        <AutoCompleteTextView
+                            android:id="@+id/aktivitas_item"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="none" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                    <TextView
+                        android:id="@+id/profileUmurText8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginTop="20dp"
+                        android:text="Program"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.501"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/aktivitas_menu" />
+
+                    <TextView
+                        android:id="@+id/profileUmurText3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginTop="20dp"
+                        android:text="Umur"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="@+id/profileUmurText2"
+                        app:layout_constraintTop_toBottomOf="@+id/profileUmurText2" />
+
+                    <TextView
+                        android:id="@+id/profileUmurText4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginTop="20dp"
+                        android:text="Berat Badan"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="@+id/profileUmurText3"
+                        app:layout_constraintTop_toBottomOf="@+id/profileUmurText3" />
+
+                    <TextView
+                        android:id="@+id/profileUmurText5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginTop="20dp"
+                        android:text="Tinggi Badan"
+                        android:textStyle="bold"
+                        android:textSize="18sp"
+                        app:layout_constraintStart_toStartOf="@+id/profileUmurText4"
+                        app:layout_constraintTop_toBottomOf="@+id/profileUmurText4" />
+
+                    <TextView
+                        android:id="@+id/textView6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="Data Diri"
+                        android:textSize="24sp"
+                        android:textColor="@color/blackTextColor"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/imageProfile"
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginTop="40dp"
+                        android:src="@drawable/ic_men"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <EditText
+                        android:id="@+id/profileNamaText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginEnd="30dp"
+                        android:text="Farid"
+                        android:background="@null"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:visibility="visible"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/imageProfile" />
+
+
+                    <TextView
+                        android:id="@+id/textView14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginTop="10dp"
+                        android:textColor="@color/blackTextColor"
+                        android:text="Rekomendasi Kalori"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="@+id/profileNamaText"
+                        app:layout_constraintTop_toBottomOf="@+id/profileNamaText" />
+
+                    <TextView
+                        android:id="@+id/bio_calorie_limit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="1581"
+                        android:textColor="@color/blackTextColor"
+                        android:textSize="17sp"
+                        android:textStyle="normal"
+                        app:layout_constraintEnd_toStartOf="@+id/textBantuCalorie"
+                        app:layout_constraintTop_toBottomOf="@+id/textView14" />
+
+                    <TextView
+                        android:id="@+id/textBantuCalorie"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text=" kalori / Hari"
+                        android:textColor="@color/blackTextColor"
+                        android:textSize="17sp"
+                        android:textStyle="normal"
+                        app:layout_constraintEnd_toEndOf="@+id/textView14"
+                        app:layout_constraintTop_toBottomOf="@+id/textView14" />
+
+                    <TextView
+                        android:id="@+id/textView16"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/blackTextColor"
+                        android:textStyle="bold"
+                        android:textSize="18sp"
+                        android:paddingLeft="5dp"
+                        android:text="Tahun"
+                        app:layout_constraintEnd_toEndOf="@+id/bio_gender_radio"
+                        app:layout_constraintTop_toTopOf="@+id/profileUmurText3" />
+
+                    <TextView
+                        android:id="@+id/textView17"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="5dp"
+                        android:text="Kg"
+                        android:textColor="@color/blackTextColor"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="@+id/textView16"
+                        app:layout_constraintTop_toTopOf="@+id/profileUmurText4" />
+
+                    <TextView
+                        android:id="@+id/textView18"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="5dp"
+                        android:text="Cm"
+                        android:textColor="@color/blackTextColor"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="@+id/textView17"
+                        app:layout_constraintTop_toTopOf="@+id/profileUmurText5" />
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/program_menu"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense.ExposedDropdownMenu"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="30dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/profileUmurText8">
+                        <AutoCompleteTextView
+                            android:id="@+id/program_item"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="none" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                    <Button
+                        android:id="@+id/update_bio_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="30dp"
+                        android:background="@drawable/rounded_button_auth"
+                        android:text="Simpan Data"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.485"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/profilehapusakun" />
+
+                    <Button
+                        android:id="@+id/profilehapusdata"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/tranparent_button"
+                        android:drawableLeft="@drawable/ic_baseline_delete_forever_24"
+                        android:text="Hapus Semua Data"
+                        android:textColor="@color/blackTextColor"
+                        app:layout_constraintStart_toStartOf="@+id/program_menu"
+                        app:layout_constraintTop_toBottomOf="@+id/program_menu" />
+
+                    <Button
+                        android:id="@+id/profilehapusakun"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/tranparent_button"
+                        android:drawableLeft="@drawable/ic_baseline_logout_24"
+                        android:text="Hapus Akun"
+                        android:textColor="@color/colorRed"
+                        app:layout_constraintStart_toStartOf="@+id/profilehapusdata"
+                        app:layout_constraintTop_toBottomOf="@+id/profilehapusdata" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="25dp"
+                    android:orientation="horizontal"
+                    android:paddingLeft="25dp"></LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+</FrameLayout>

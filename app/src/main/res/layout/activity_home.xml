@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@android:color/white"
+    tools:context="com.ecalm.ez_health.HomeActivity">
+
+    <LinearLayout
+        android:id="@+id/fabblock"
+        android:visibility="invisible"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:elevation="1dp"
+        android:background="#80000000"
+        android:orientation="horizontal" />
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/nav_fragment"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:defaultNavHost="true"
+        app:navGraph="@navigation/nav_graph"/>
+
+    <com.google.android.material.bottomappbar.BottomAppBar
+        android:id="@+id/bottomappbar"
+        app:elevation="2dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        app:fabCradleVerticalOffset="0dp"
+        app:fabCradleRoundedCornerRadius="50dp">
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottom_navigatin_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            app:menu="@menu/bottom_nav" />
+    </com.google.android.material.bottomappbar.BottomAppBar>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        app:elevation="2dp"
+        app:backgroundTint="@color/colorGreen"
+        app:tint="@color/colorWhite"
+        app:srcCompat="@drawable/ic_baseline_photo_camera_24"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_anchor="@id/bottomappbar"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabpagi"
+        android:visibility="invisible"
+        app:backgroundTint="@color/colorGreen"
+        app:tint="@color/colorWhite"
+        app:srcCompat="@drawable/ic_fab_pagi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_anchor="@id/fab"
+        app:layout_anchorGravity="center_horizontal"
+        android:translationX="-90dp"
+        android:translationY="-10dp"
+        />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabsiang"
+        android:visibility="invisible"
+        app:backgroundTint="@color/colorGreen"
+        app:tint="@color/colorWhite"
+        app:srcCompat="@drawable/ic_fab_siang"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_anchorGravity="center_horizontal"
+        app:layout_anchor="@id/fab"
+        android:translationX="-35dp"
+        android:translationY="-60dp"
+        />
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabmalam"
+        android:visibility="invisible"
+        app:backgroundTint="@color/colorGreen"
+        app:tint="@color/colorWhite"
+        app:srcCompat="@drawable/ic_fab_malam"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_anchorGravity="center_horizontal"
+        app:layout_anchor="@id/fab"
+        android:translationX="35dp"
+        android:translationY="-60dp"
+        />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabsnack"
+        android:visibility="invisible"
+        app:backgroundTint="@color/colorGreen"
+        app:tint="@color/colorWhite"
+        app:srcCompat="@drawable/ic_fab_snack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_anchorGravity="center_horizontal"
+        app:layout_anchor="@id/fab"
+        android:translationX="90dp"
+        android:translationY="-10dp"
+        />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

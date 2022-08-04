@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.ecalm.ez_health.fragment.MinumFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_height="match_parent"
+            android:layout_width="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:id="@+id/headerLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorGreen2">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingBottom="20dp"
+                        android:paddingTop="20dp">
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Tantangan Minum Air"
+                            android:textColor="@color/whiteTextColor"
+                            android:textSize="22sp"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@id/headerLayout"
+                    android:orientation="vertical">
+
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="20dp"
+                        android:padding="20dp">
+
+                        <TextView
+                            android:id="@+id/tglminumdate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginTop="35dp"
+                            android:layout_marginEnd="20dp"
+                            android:text="16 November 2019"
+                            android:textColor="@color/contentTextColor"
+                            android:textSize="22sp"
+                            android:textStyle="bold"
+                            app:layout_constraintEnd_toStartOf="@+id/nextDateMinum"
+                            app:layout_constraintStart_toEndOf="@+id/previousDateMinum"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <ImageButton
+                            android:id="@+id/nextDateMinum"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@null"
+                            android:minHeight="48dp"
+                            android:src="@drawable/ic_nextdate"
+                            app:layout_constraintBottom_toBottomOf="@+id/tglminumdate"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/tglminumdate"
+                            app:layout_constraintTop_toTopOf="@+id/tglminumdate"
+                            tools:ignore="SpeakableTextPresentCheck" />
+
+                        <ImageButton
+                            android:id="@+id/previousDateMinum"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@null"
+                            android:minHeight="48dp"
+                            android:src="@drawable/ic_backdate"
+                            app:layout_constraintBottom_toBottomOf="@+id/tglminumdate"
+                            app:layout_constraintEnd_toStartOf="@+id/tglminumdate"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="@+id/tglminumdate"
+                            tools:ignore="SpeakableTextPresentCheck" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.cardview.widget.CardView
+                        style="@style/reportsCardStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="15dp"
+                        app:cardBackgroundColor="@color/whiteTextColor"
+                        app:cardCornerRadius="16dp">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_margin="30dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/textView8"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="250 ml"
+                                android:textColor="@color/blackTextColor"
+                                app:layout_constraintEnd_toEndOf="@+id/gelas1"
+                                app:layout_constraintStart_toStartOf="@+id/gelas1"
+                                app:layout_constraintTop_toBottomOf="@+id/gelas1" />
+
+                            <TextView
+                                android:id="@+id/textView9"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="250 ml"
+                                android:textColor="@color/blackTextColor"
+                                app:layout_constraintEnd_toEndOf="@+id/gelas2"
+                                app:layout_constraintStart_toStartOf="@+id/gelas2"
+                                app:layout_constraintTop_toBottomOf="@+id/gelas2" />
+
+                            <TextView
+                                android:id="@+id/textView10"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="250 ml"
+                                android:textColor="@color/blackTextColor"
+                                app:layout_constraintEnd_toEndOf="@+id/gelas3"
+                                app:layout_constraintStart_toStartOf="@+id/gelas3"
+                                app:layout_constraintTop_toBottomOf="@+id/gelas3" />
+
+                            <TextView
+                                android:id="@+id/textView11"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="250 ml"
+                                android:textColor="@color/blackTextColor"
+                                app:layout_constraintEnd_toEndOf="@+id/gelas6"
+                                app:layout_constraintStart_toStartOf="@+id/gelas6"
+                                app:layout_constraintTop_toBottomOf="@+id/gelas6" />
+
+                            <TextView
+                                android:id="@+id/textView19"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="250 ml"
+                                android:textColor="@color/blackTextColor"
+                                app:layout_constraintEnd_toEndOf="@+id/gelas7"
+                                app:layout_constraintStart_toStartOf="@+id/gelas7"
+                                app:layout_constraintTop_toBottomOf="@+id/gelas6" />
+
+                            <TextView
+                                android:id="@+id/textView20"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="250 ml"
+                                android:textColor="@color/blackTextColor"
+                                app:layout_constraintEnd_toEndOf="@+id/gelas8"
+                                app:layout_constraintStart_toStartOf="@+id/gelas8"
+                                app:layout_constraintTop_toBottomOf="@+id/gelas6" />
+
+                            <TextView
+                                android:id="@+id/textView12"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="250 ml"
+                                android:textColor="@color/blackTextColor"
+                                app:layout_constraintEnd_toEndOf="@+id/gelas5"
+                                app:layout_constraintStart_toStartOf="@+id/gelas5"
+                                app:layout_constraintTop_toBottomOf="@+id/gelas5" />
+
+                            <TextView
+                                android:id="@+id/textView13"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="250 ml"
+                                android:textColor="@color/blackTextColor"
+                                app:layout_constraintEnd_toEndOf="@+id/gelas4"
+                                app:layout_constraintStart_toStartOf="@+id/gelas4"
+                                app:layout_constraintTop_toBottomOf="@+id/gelas4" />
+
+                            <TextView
+                                android:id="@+id/minumTitle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="80dp"
+                                android:layout_marginEnd="12dp"
+                                android:text="Minum Air"
+                                android:textColor="@color/blackTextColor"
+                                android:textSize="18sp"
+                                android:textStyle="bold"
+                                app:layout_constraintEnd_toStartOf="@+id/literTextView"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:id="@+id/literTextView"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="12dp"
+                                android:layout_marginEnd="80dp"
+                                android:text=" 0 / 2 Liter"
+                                android:textColor="@color/blackTextColor"
+                                android:textSize="16sp"
+                                app:layout_constraintBottom_toBottomOf="@+id/minumTitle"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toEndOf="@+id/minumTitle"
+                                app:layout_constraintTop_toTopOf="@+id/minumTitle" />
+
+                            <CheckBox
+                                android:id="@+id/gelas1"
+                                android:layout_width="60dp"
+                                android:layout_height="70dp"
+                                android:layout_marginStart="20dp"
+                                android:layout_marginTop="28dp"
+                                android:layout_marginEnd="10dp"
+                                android:background="@drawable/gelas_selector"
+                                android:button="@null"
+                                app:buttonCompat="@null"
+                                app:layout_constraintEnd_toStartOf="@+id/gelas2"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@id/minumTitle"></CheckBox>
+
+                            <CheckBox
+                                android:id="@+id/gelas2"
+                                android:layout_width="60dp"
+                                android:layout_height="70dp"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginEnd="10dp"
+                                android:background="@drawable/gelas_selector"
+                                android:button="@null"
+                                app:buttonCompat="@null"
+                                app:layout_constraintEnd_toStartOf="@+id/gelas3"
+                                app:layout_constraintStart_toEndOf="@+id/gelas1"
+                                app:layout_constraintTop_toTopOf="@+id/gelas1">
+
+                            </CheckBox>
+
+                            <CheckBox
+                                android:id="@+id/gelas3"
+                                android:layout_width="60dp"
+                                android:layout_height="70dp"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginEnd="10dp"
+                                android:background="@drawable/gelas_selector"
+                                android:button="@null"
+                                app:buttonCompat="@null"
+                                app:layout_constraintEnd_toStartOf="@+id/gelas4"
+                                app:layout_constraintStart_toEndOf="@+id/gelas2"
+                                app:layout_constraintTop_toTopOf="@+id/gelas1">
+
+                            </CheckBox>
+
+                            <CheckBox
+                                android:id="@+id/gelas4"
+                                android:layout_width="60dp"
+                                android:layout_height="70dp"
+
+                                android:layout_marginStart="10dp"
+                                android:layout_marginEnd="20dp"
+                                android:background="@drawable/gelas_selector"
+                                android:button="@null"
+                                app:buttonCompat="@null"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toEndOf="@+id/gelas3"
+                                app:layout_constraintTop_toTopOf="@+id/gelas1">
+
+                            </CheckBox>
+
+                            <CheckBox
+                                android:id="@+id/gelas5"
+                                android:layout_width="60dp"
+                                android:layout_height="70dp"
+                                android:layout_marginTop="32dp"
+                                android:background="@drawable/gelas_selector"
+                                android:button="@null"
+                                app:buttonCompat="@null"
+                                app:layout_constraintEnd_toEndOf="@+id/gelas1"
+                                app:layout_constraintStart_toStartOf="@+id/gelas1"
+                                app:layout_constraintTop_toTopOf="@+id/textView8">
+
+                            </CheckBox>
+
+                            <CheckBox
+                                android:id="@+id/gelas6"
+                                android:layout_width="60dp"
+                                android:layout_height="70dp"
+                                android:background="@drawable/gelas_selector"
+                                android:button="@null"
+                                app:buttonCompat="@null"
+                                app:layout_constraintEnd_toEndOf="@+id/gelas2"
+                                app:layout_constraintStart_toStartOf="@+id/gelas2"
+                                app:layout_constraintTop_toTopOf="@+id/gelas5"></CheckBox>
+
+                            <CheckBox
+                                android:id="@+id/gelas7"
+                                android:layout_width="60dp"
+                                android:layout_height="70dp"
+                                android:background="@drawable/gelas_selector"
+                                android:button="@null"
+                                app:buttonCompat="@null"
+                                app:layout_constraintEnd_toEndOf="@+id/gelas3"
+                                app:layout_constraintHorizontal_bias="1.0"
+                                app:layout_constraintStart_toStartOf="@+id/gelas3"
+                                app:layout_constraintTop_toTopOf="@+id/gelas5"></CheckBox>
+
+                            <CheckBox
+                                android:id="@+id/gelas8"
+                                android:layout_width="60dp"
+                                android:layout_height="70dp"
+                                android:background="@drawable/gelas_selector"
+                                android:button="@null"
+                                app:buttonCompat="@null"
+                                app:layout_constraintEnd_toEndOf="@+id/gelas4"
+                                app:layout_constraintHorizontal_bias="1.0"
+                                app:layout_constraintStart_toStartOf="@+id/gelas4"
+                                app:layout_constraintTop_toTopOf="@+id/gelas5"></CheckBox>
+
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>
